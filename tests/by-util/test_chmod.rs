@@ -14,7 +14,7 @@ struct TestCase {
     args: Vec<&'static str>,
     before: u32,
     after: u32,
-    umask:Option<u16>
+    umask:Option<libc::mode_t>
 }
 
 fn make_file(file: &str, mode: u32) {
